@@ -1,0 +1,20 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    users(first: Int = 100, after: String): UserDTOConnection @connection (for: "UserDTO")
+}
+
+type Mutation {
+    createAuthToken(userName: String!, passwordHash: String!): String
+}
+
+type UserDTO {
+    id: String!
+    firstName: String!
+    lastName: String!
+    userName: String!
+    email: String!
+}

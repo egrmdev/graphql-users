@@ -1,0 +1,20 @@
+query {
+    users {
+        edges {
+            node {
+                id
+                firstName
+                lastName
+                userName
+                email
+            }
+            cursor
+        }
+        pageInfo {
+            hasPreviousPage
+            hasNextPage
+            startCursor
+            endCursor
+        }
+    }
+}

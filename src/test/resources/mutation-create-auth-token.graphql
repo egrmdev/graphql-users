@@ -1,0 +1,3 @@
+mutation($userName: String!, $passwordHash: String!) {
+    createAuthToken(userName: $userName, passwordHash: $passwordHash)
+}
